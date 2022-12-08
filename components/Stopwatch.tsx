@@ -4,6 +4,9 @@ import { styles } from './StopwatchStyles';
 
 const Stopwatch = () => {
   const [timer, setTimer] = useState('00 : 00 : 000')
+  let [milliseconds,seconds,minutes] = [0,0,0,];
+  const [int, setInt] = useState<any>()
+
   return (
     <View style={styles.container}>
         <View style={styles.timerDisplay}>
