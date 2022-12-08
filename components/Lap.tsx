@@ -19,7 +19,7 @@ display: {
 },
 displayText: {
     color: 'brown',
-    fontSize: 25,
+    fontSize: 15,
     textAlign: 'center'
 }
 })

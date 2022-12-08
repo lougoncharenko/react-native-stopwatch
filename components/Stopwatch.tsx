@@ -17,7 +17,8 @@ const Stopwatch = () => {
     setInt(id)
   }
   const handleLap = () => {
-    alert('Time Lapped')
+    console.log(timer)
+    setLapTime(`Lap Time: ${timer}`) 
   }
   const handlePause = () => {
     clearInterval(int); 
