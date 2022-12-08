@@ -19,7 +19,24 @@ const Stopwatch = () => {
   const handleReset = () => {
     alert('Timer reset')
   }
-
+  const displayTimer = () => {
+    milliseconds+=10;
+    if(milliseconds == 1000){
+        milliseconds = 0;
+        seconds++;
+        if(seconds == 60){
+            seconds = 0;
+            minutes++;
+            if(minutes == 60){
+                minutes = 0;
+            }
+        }
+    }
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+    let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+    setTimer(`${m} : ${s} : ${ms}`);
+}
   return (
     <View style={styles.container}>
         <View style={styles.timerDisplay}>
