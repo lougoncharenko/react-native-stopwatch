@@ -26,6 +26,7 @@ const Stopwatch = () => {
   const handleReset = () => {
     clearInterval(int);
     setTimer(('00 : 00 : 000 '))
+    setLapTime('')
   }
   const displayTimer = () => {
     milliseconds+=10;
