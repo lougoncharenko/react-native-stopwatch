@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, View } from 'react-native';
+import {Text, View, StyleSheet } from 'react-native';
 
 interface Props {
     lap: string
@@ -7,10 +7,20 @@ interface Props {
 
 const Lap = (lap: Props) => {
   return (
-   <View>
-        <Text>{lap.text}</Text>
+   <View style= {styles.display}>
+        <Text style= {styles.displayText}>{lap.text}</Text>
    </View>
   )
 }
 
+const styles = StyleSheet.create({
+display: {
+    padding: 20,
+},
+displayText: {
+    color: 'brown',
+    fontSize: 25,
+    textAlign: 'center'
+}
+})
 export default Lap
