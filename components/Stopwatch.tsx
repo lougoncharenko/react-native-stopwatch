@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import { Pressable, Text, View } from 'react-native';
 import { styles } from './StopwatchStyles';
+import Lap from './Lap';
 
 const Stopwatch = () => {
   const [timer, setTimer] = useState('00 : 00 : 000')
   let [milliseconds,seconds,minutes] = [0,0,0,];
   const [int, setInt] = useState<any>()
+  const [lapTime, setLapTime] = useState('')
   // Button Functions
   const handleStart = () => {
     if(int!==''){
@@ -61,6 +63,7 @@ const Stopwatch = () => {
                 </Pressable>
             </View>
         </View>
+        <Lap text={lapTime}/>
     </View>
   )
 }
