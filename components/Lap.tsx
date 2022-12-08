@@ -1,7 +1,11 @@
 import React from 'react'
 import {Text, View } from 'react-native';
 
-const Lap = () => {
+interface Props {
+    lap: string
+}
+
+const Lap = (lap: Props) => {
   return (
    <View>
         <Text></Text>
