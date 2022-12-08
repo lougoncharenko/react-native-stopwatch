@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { styles } from './StopwatchStyles';
 
 const Stopwatch = () => {
