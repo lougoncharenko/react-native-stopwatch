@@ -8,7 +8,7 @@ interface Props {
 const Lap = (lap: Props) => {
   return (
    <View>
-        <Text></Text>
+        <Text>{lap.text}</Text>
    </View>
   )
 }
