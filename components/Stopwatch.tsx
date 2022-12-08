@@ -8,10 +8,18 @@ const Stopwatch = () => {
         <View style={styles.timerDisplay}>
           <Text style={styles.timer}>{timer}</Text>
             <View style={styles.buttons}> 
-                <Pressable style={styles.startButton}></Pressable>
-                <Pressable style={styles.lapButton}></Pressable>
-                <Pressable style={styles.pauseButton}></Pressable>
-                <Pressable style={styles.resetButton}></Pressable>
+                <Pressable style={styles.startButton}>
+                  <Text>Start</Text>
+                </Pressable>
+                <Pressable style={styles.lapButton}>
+                  <Text>Lap</Text>
+                </Pressable>
+                <Pressable style={styles.pauseButton}>
+                  <Text>Pause</Text>
+                </Pressable>
+                <Pressable style={styles.resetButton}>
+                  <Text>Reset</Text>
+                </Pressable>
             </View>
         </View>
     </View>
@@ -25,7 +33,7 @@ const styles = StyleSheet.create(
         borderWidth: 20,
         borderColor: 'black',
         borderStyle: 'solid',
-        width: '80%',
+        width: '90%',
         position: 'absolute',
         padding: 50,
         borderRadius: 100,
@@ -39,8 +47,32 @@ const styles = StyleSheet.create(
         textAlign: 'center',
         color: 'red',
         fontSize: 25
+      },
+      buttons: {
+        flexDirection: 'row',
+        justifyContent: 'center'
+      },
+      startButton: {
+        backgroundColor: 'rgb(90, 221, 90)',
+        margin: 15,
+        padding: 5,
+       
+      },
+      lapButton: {
+        backgroundColor: 'yellow',
+        padding: 5,
+        margin: 15,
+      },
+      pauseButton: {
+        backgroundColor: 'pink',
+        padding: 5,
+        margin: 15,
+      },
+      resetButton: {
+        backgroundColor: '#e64b67',
+        padding: 5,
+        margin: 15,
       }
-      
 
     })
 
