@@ -1,4 +1,4 @@
-# Expo App
+# React Native StopWatch App
 
 In this assignment we'll build our first React Native application from scratch using version of RN called Expo. React Native Expo is a streamlined version of the React Native framework allowing us to get more done with less code. Expo limits the device specific features we can access to just the most common ones, but in most cases is perfectly suited for creating simple mobile apps.
 
