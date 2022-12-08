@@ -8,16 +8,21 @@ const Stopwatch = () => {
   const [int, setInt] = useState<any>()
   // Button Functions
   const handleStart = () => {
-    alert('Timer Starter')
+    if(int!==''){
+      clearInterval(int);
+    }
+    const id = setInterval(displayTimer,10);
+    setInt(id)
   }
   const handleLap = () => {
     alert('Time Lapped')
   }
   const handlePause = () => {
-    alert('Timer Paused')
+    clearInterval(int); 
   }
   const handleReset = () => {
-    alert('Timer reset')
+    clearInterval(int);
+    setTimer(('00 : 00 : 000 '))
   }
   const displayTimer = () => {
     milliseconds+=10;
